@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Weather 1.1 FB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <body>
+  <div class="wrapper">
+    <div class="main">
+      <div class="pageTitle">
+        <h1>Weather</h1>
+      </div>
+      <div class="where">
+        <h3 class="cityTitle"><strong><span class="city"></span></strong></h3>
+      </div>
+      <div class="icon"></div>
+      <div id="weatherType"></div>
+      <div id="tempWrapper">
+        <div class="tempWord"> <strong> &nbspTemperature:&nbsp</strong></div>
+        <div class="tempValue">
+          <span id="temp"></span> <span id="tempIcon"></span>
+        </div>
+      </div>
+      <div class="unitButtons">
+        <button class="btn btn-primary celcius">C</button><button class="btn btn-primary farenheit">F</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="interior">
+        <hr/>
+        <a class="btn btn-secondary modalClick" id="unclicked" href="#open-modal">Extra Info</a>
+      </div>
+    </div>
+  </div>
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#modal-close" title="Close" class="modal-close"><i class="fa fa-close"></i></a>
+        <h1 class="modalTitle">Weather for <span class="city"></span></h1>
+        <table class="extraWeatherInfo">
+          <tr>
+            <td class="tableLeft">Humidity</td>
+            <td class="humidity"></td>
+          </tr>
+          <tr>
+            <td>Pressure</td>
+            <td class="pressure"></td>
+          </tr>
+          <tr>
+            <td>Wind direction</td>
+            <td class="windDirection"></td>
+          </tr>
+          <tr>
+            <td>Wind speed</td>
+            <td class="windSpeed"></td>
+          </tr>
+          <tr>
+            <td>Sunrise</td>
+            <td class="sunrise"></td>
+          </tr>
+          <tr>
+            <td>Sunset</td>
+            <td class="sunset"></td>
+          </tr>
+        </table>
+        <div class="mobileClose">
+          <a href="#modal-close" title="Close" class="modal-close2">Close</a>
+        </div>
+      </div>
+    </div>
+  
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

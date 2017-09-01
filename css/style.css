@@ -1,0 +1,328 @@
+html,
+body {
+  background-color: #161616;
+  height: 100%;
+  line-height:1;
+}
+
+
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  font-weight: bold;
+  text-align: center;
+  height: auto;
+  min-height:100%;
+  margin: 10px 20px 10px 20px;
+  justify-content: flex-start;
+  
+ 
+}
+
+.main {
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  line-height: 1;
+  background-color:#161616;
+  overflow: visible;
+ 
+}
+
+.pageTitle {
+  color: white;
+}
+
+.where {
+ 
+  padding-top: 5px;
+  width: 100%;
+}
+
+.cityTitle {
+  color: white;
+}
+
+#weatherType {
+  color: white;
+  font-size: 1.2em
+}
+
+.icon {
+  font-size: 7em;
+  color: white;
+  height: 150px;
+}
+
+#weatherType {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#tempWrapper {
+  color: white;
+  font-size: 1.2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.tempWord {
+  text-align: right;
+  align-self: flex-end;
+  flex: 0 1 54%;
+}
+
+.tempValue {
+  text-align: left;
+}
+
+#temp {
+  width: 20px;
+  display: inline-block;
+  text-align: right;
+}
+
+.unitButtons {
+
+}
+
+.farenheit {
+  border-radius: 0 5px 5px 0;
+  width: 40px;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+  background-color: #535F6B;
+  color: gray;
+}
+
+.farenheit:hover {
+  background-color: #535F6B;
+  color: gray;
+}
+
+.celcius {
+  background-color: #000080;
+  border-radius: 5px 0 0 5px;
+  width: 40px;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.celcius:hover {
+  background-color: #000080;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+#data {
+  display: none;
+}
+
+
+/*Modal CSS*/
+
+.container {
+  display:flex;
+  flex-flow:column wrap;
+  margin: auto;
+  width: 100%;
+  flex-flow: column wrap;
+  margin: 0;
+  padding: 0 0 20px 0;
+  flex:1;
+  justify-content:flex-end;
+}
+
+.interior {
+  text-align: center;
+  
+  
+}
+
+hr {
+  color: gray;
+  background-color: gray;
+  height: 1px;
+  width: 95%;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.modal-window {
+  position: fixed;
+  top: 20vh;
+  
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  height: 0vh;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  border-radius: 3px;
+  width: 400px;
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 1.5em;
+  background: #fff;
+  color: #444;
+  top: 50%;
+  height:40vh;
+}
+
+.modalTitle {
+  color: black;
+  max-width: 350px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .modal-window {
+    top: 0vh;
+  }
+  .modal-window>div {
+    width: 100%;
+    height:100vh;
+    position: relative;
+    margin: 0;
+  }
+  .mobileClose {
+    width: 100%;
+    text-align: center;
+    bottom: 40px;
+    left: 0px;
+    position: fixed;
+  }
+  .modalTitle {
+    margin-top: 30%;
+    padding-left: 20px;
+  }
+  
+  
+}
+
+@media (max-height: 400px) {
+  .modal-window {
+    top: 0vh;
+  }
+  .modal-window>div {
+    width: 50%;
+    height:70vh;
+    margin: auto;
+  }
+  .modalTitle {
+    margin-top: 0px;
+    padding-left: 20px;
+  }
+  
+  .wrapper {
+  min-height: 100%;
+}
+  
+  .icon {
+  font-size: 4em;
+    height:80px;
+  color: white;
+  
+}
+  
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 50px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: black;
+}
+
+.modal-close2 {
+  color: #aaa;
+  font-size: 1.2em;
+  padding: 5px 15px 7px 15px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.modal-close2:hover {
+  color: #000;
+  with: 50px;
+  text-decoration: none;
+}
+
+.mobileClose {}
+
+@media (min-width: 800px) {
+  .mobileClose {
+    display: none;
+  }
+}
+
+.modal-window h1 {
+  font-size: 150%;
+}
+
+.fa-close {
+  font-size: 1.5em;
+}
+
+
+/*Weather table css */
+
+.extraWeatherInfo {
+  min-width: 300px;
+  max-width: 350px;
+  margin: auto;
+}
+
+.tableLeft {
+  width: 50%;
+}
+
+.ws:hover {
+  cursor: pointer;
+  color: #00008b;
+}
+
+.ws {
+  text-decoration: underline;
+  color: #65909A;
+}
